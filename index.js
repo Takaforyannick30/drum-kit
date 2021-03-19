@@ -6,5 +6,7 @@ for(let i = 0; i < drums; i++) {
 
 document.querySelectorAll(".drum")[i].addEventListener("click", function (){
 alert("Greetings from Zamunda!");
+let sound = new Audio("sounds/crash.mp3")
+sound.play()
 });
 }
