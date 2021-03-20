@@ -6,7 +6,16 @@ for(let i = 0; i < drums; i++) {
 
 document.querySelectorAll(".drum")[i].addEventListener("click", function (){
 
-let buttonInnerHTML = this.innerHTML;
+    let buttonInnerHTML = this.innerHTML;
+
+    makeSound(buttonInnerHTML);
+});
+}
+
+// Detecting keyboard press
+document.addEventListener("keypress", function(event) {
+    makeSound(event.key);
+});
 
 switch (buttonInnerHTML) {
     case "w":
@@ -42,6 +51,4 @@ switch (buttonInnerHTML) {
         let kick = new Audio("sounds/kick-bass.mp3");
         kick.play();
         break;
-}
-});
 }
