@@ -18,8 +18,8 @@ document.addEventListener("keypress", function(event) {
 });
 
 
-function makeSound(){
-    switch (buttonInnerHTML) {
+function makeSound(key){
+    switch (key) {
         case "w":
             let tom1 = new Audio("sounds/tom-1.mp3");
             tom1.play();
@@ -48,6 +48,7 @@ function makeSound(){
         case "k":
             let crash = new Audio("sounds/crash.mp3");
             crash.play();
+            break;
 
         case "l":
             let kick = new Audio("sounds/kick-bass.mp3");
